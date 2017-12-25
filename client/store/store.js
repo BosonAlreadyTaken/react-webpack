@@ -1,6 +1,13 @@
-/*
-* @Author: showa11
-* @Date:   2017-12-24 17:13:03
-* @Last Modified by:   showa11
-* @Last Modified time: 2017-12-24 17:13:09
-*/
+import AppStateClass from './app.state.js';
+
+export const AppState = AppStateClass
+
+export default {
+  AppState,
+}
+
+export const createStoreMap = () => {
+  return {
+    appState: new AppState(),
+  }
+}

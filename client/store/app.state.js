@@ -5,9 +5,15 @@ import {
   autorun
 } from 'mobx'
 
-class AppState {
-  @observable count = 0
-  @observable name = 'Bosn'
+export default class AppState {
+
+  constructor({count, name} = {count: 0, name: 'Bosn'}) {
+    this.count = count;
+    this.name = name;
+  }
+
+  @observable count
+  @observable name
   @computed get msg() {
     return `${this.name} say count is ${this.count}`
   }
@@ -17,16 +23,10 @@ class AppState {
   @action changeName(name) {
     this.name = name;
   }
+  toJson() {
+    return {
+      count: this.count,
+      name: this.name,
+    }
+  }
 }
-
-const appState = new AppState()
-
-autorun(() => {
-})
-
-setInterval(() => {
-  appState.add()
-}, 1000)
-
-
-export default appState
