@@ -5,7 +5,7 @@ const MemoryFs = require('memory-fs');
 const proxy = require('http-proxy-middleware');
 const ReactDomServer = require('react-dom/server');
 
-const serverConfig = require('../build/webpack.config.server.js')
+const serverConfig = require('../../build/webpack.config.server.js')
 
 const getTemplate = () => {
   return new Promise((resolve, reject) => {

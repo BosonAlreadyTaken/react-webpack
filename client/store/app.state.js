@@ -22,7 +22,6 @@ class AppState {
 const appState = new AppState()
 
 autorun(() => {
-  console.log(appState.msg)
 })
 
 setInterval(() => {
