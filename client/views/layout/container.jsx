@@ -14,7 +14,7 @@ const styles = {
       margin: 10,
       marginTop: 70,
     },
-  },
+  }
 }
 
 
